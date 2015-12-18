@@ -1,12 +1,18 @@
 var React = require('react');
 var Router = require('react-router');
+var Repos = require('./Github/Repos');
+var UserProfiles = require('./Github/UserProfiles');
+var Notes = require('./Notes/Notes');
+
 
 var Profile = React.createClass({
   getInitialState: function() {
     return {
-      notes: [],
-      bio: {},
-      repos: [],
+      notes: [1,2,3],
+      bio: {
+        name:'Austin Worachet'
+      },
+      repos: ['a','b','c'],
     }
   },
   render: function() {
@@ -14,13 +20,13 @@ var Profile = React.createClass({
     return(
       <div className="row">
         <div className="col-md-4">
-          User Profile Component --> {this.props.params.username}
+        <UserProfiles username={this.props.params.username} bio={this.state.bio}/>
         </div>
         <div className="cold-md-4">
-          Repos Component
+          <Repos repos={this.state.repos}/>
         </div>
         <div className="cold-md-4">
-          NotesComponent
+          <Notes notes={this.state.repos}/>
         </div>
       </div>
     )
