@@ -10,10 +10,11 @@ var Profile = React.createClass({
     }
   },
   render: function() {
+    console.log(this.props);
     return(
       <div className="row">
         <div className="col-md-4">
-          User Profile Component
+          User Profile Component --> {this.props.params.username}
         </div>
         <div className="cold-md-4">
           Repos Component
