@@ -30,7 +30,6 @@ var Profile = React.createClass({
     this.ref.child(this.props.params.username).child(this.state.notes.length).set(newNote);
   },
   render: function() {
-    // console.log(this.props);
     return(
       <div className="row">
         <div className="col-md-4">

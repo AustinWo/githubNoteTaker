@@ -24415,7 +24415,6 @@
 	    this.ref.child(this.props.params.username).child(this.state.notes.length).set(newNote);
 	  },
 	  render: function render() {
-	    // console.log(this.props);
 	    return React.createElement(
 	      'div',
 	      { className: 'row' },
