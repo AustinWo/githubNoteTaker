@@ -11,7 +11,7 @@ var IndexRoute = Router.IndexRoute;
 module.exports = (
   // whenever someone is at the home index, render the Main component (Hello World)
   <Route path="/" component={Main}>
-    <Route path="profile/:username" component={Profile} />
+  <Route path="profile/:username" component={Profile} />
     <IndexRoute component={Home} />
   </Route>
 );
